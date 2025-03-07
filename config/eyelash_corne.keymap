@@ -70,7 +70,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "HRR_CEDILLA";
             #binding-cells = <0>;
-            bindings = <&hrr_cedilla_macro>;
+            bindings = <&mt RIGHT_GUI EN_SEMICOLON>;
         };
     };
 
