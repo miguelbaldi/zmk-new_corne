@@ -93,9 +93,23 @@
                 <&macro_press>,
                 <&kp F>,
                 <&macro_release>,
-                <&kp LEFT_CONTROL &kp LEFT_SHIFT>;
+                <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp F>;
 
             label = "Format code";
+        };
+
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_press>,
+                <&kp C>,
+                <&macro_release>,
+                <&kp C &kp LEFT_CONTROL>;
+
+            label = "COPY";
         };
     };
 
@@ -111,7 +125,7 @@
                                                   &kp LEFT_ALT  &mo 1              &lt 3 SPACE                                               &lt 3 ENTER  &mo 2              &to 1
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         lower_layer {
@@ -123,16 +137,16 @@
                                         &kp LEFT_GUI    &trans           &kp SPACE                                                                            &kp ENTER     &trans    &to 2
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR      &kp PRCNT                                &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK     &kp LPAR             &kp RPAR              &kp BSPC
-&trans  &trans    &trans  &trans    &format_code  &kp K_PASTE              &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp PT_ACUTE  &kp PT_LEFT_BRACKET  &kp PT_RIGHT_BRACKET  &kp PT_SINGLE_QUOTE
-&trans  &trans    &trans  &none     &none         &kp C_AC_COPY  &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp PT_GRAVE  &kp PT_LEFT_BRACE    &kp PT_RIGHT_BRACE    &kp PT_DOUBLE_QUOTES
-                          &to 0     &trans        &kp SPACE                                                                 &kp RET    &to 1      &to 3
+&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR      &kp PRCNT                              &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK     &kp LPAR             &kp RPAR              &kp BSPC
+&trans  &trans    &trans  &trans    &format_code  &kp K_PASTE            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp PT_ACUTE  &kp PT_LEFT_BRACKET  &kp PT_RIGHT_BRACKET  &kp PT_SINGLE_QUOTE
+&trans  &trans    &trans  &none     &none         &copy        &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp PT_GRAVE  &kp PT_LEFT_BRACE    &kp PT_RIGHT_BRACE    &kp PT_DOUBLE_QUOTES
+                          &to 0     &trans        &kp SPACE                                                               &kp RET    &to 1      &to 3
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -159,7 +173,7 @@
                                                    &to 0            &trans           &trans                                                                 &kp INS         &to 3  &to 0
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&rgb_encoder>;
         };
     };
 };
