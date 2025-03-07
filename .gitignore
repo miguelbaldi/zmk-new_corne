@@ -3,3 +3,4 @@ zmk/
 modules/
 tools/
 .west/
+CURRENT_left.UF2
