@@ -12,8 +12,8 @@
 #include <dt-bindings/zmk/rgb.h>
 
 /* Locale key codes extensions: https://github.com/joelspadin/zmk-locale-generator */
-#include <keys_pt_abnt2.h>
-#include <keys_us_international.h>
+#include "keys_pt_abnt2.h"
+#include "keys_us_international.h"
 
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
