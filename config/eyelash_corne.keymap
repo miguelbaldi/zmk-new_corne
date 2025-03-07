@@ -85,7 +85,15 @@
         format_code: format_code {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp F>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_press>,
+                <&kp F>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL &kp LEFT_SHIFT>;
 
             label = "Format code";
         };
@@ -121,10 +129,10 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR      &kp PRCNT                              &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK     &kp LPAR             &kp RPAR              &kp BSPC
-&trans  &trans    &trans  &trans    &format_code  &kp K_PASTE            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp PT_ACUTE  &kp PT_LEFT_BRACKET  &kp PT_RIGHT_BRACKET  &kp PT_SINGLE_QUOTE
-&trans  &trans    &trans  &none     &none         &kp K_COPY   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp PT_GRAVE  &kp PT_LEFT_BRACE    &kp PT_RIGHT_BRACE    &kp PT_DOUBLE_QUOTES
-                          &to 0     &trans        &kp SPACE                                                               &kp RET    &to 1      &to 3
+&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR      &kp PRCNT                                &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK     &kp LPAR             &kp RPAR              &kp BSPC
+&trans  &trans    &trans  &trans    &format_code  &kp K_PASTE              &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp PT_ACUTE  &kp PT_LEFT_BRACKET  &kp PT_RIGHT_BRACKET  &kp PT_SINGLE_QUOTE
+&trans  &trans    &trans  &none     &none         &kp C_AC_COPY  &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp PT_GRAVE  &kp PT_LEFT_BRACE    &kp PT_RIGHT_BRACE    &kp PT_DOUBLE_QUOTES
+                          &to 0     &trans        &kp SPACE                                                                 &kp RET    &to 1      &to 3
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -143,7 +151,7 @@
         };
 
         layer_4 {
-            display-name = "CONTROL";
+            display-name = "CTRL";
             bindings = <
 &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &none                                 &mmv MOVE_UP                     &bt BT_CLR      &none  &none  &none  &none  &none
 &rgb_ug RGB_TOG  &rgb_ug RGB_SAD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &none                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bt BT_CLR_ALL  &none  &none  &none  &none  &none
