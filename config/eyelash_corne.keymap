@@ -34,6 +34,32 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
+
+        HRL: HRL {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Home Row Left";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <3 0 1 2 3 4 5 15 16 17 18 30 31 32 33 42 43 44 13 14 28 29>;
+            hold-trigger-on-release;
+        };
+
+        HRR: HRR {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Home Row Right";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41 45 46 47>;
+            hold-trigger-on-release;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -56,10 +82,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E     &kp R  &kp T                               &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp ESCAPE
-&kp BACKSPACE   &kp A  &kp S  &kp D     &kp F  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp LCTRL
-                              &kp LGUI  &mo 1  &lt 3 SPACE                                               &lt 3 ENTER  &mo 2  &kp RALT
+&kp TAB         &kp Q            &kp W            &kp E         &kp R              &kp T                               &kp UP                &kp Y        &kp U              &kp I         &kp O            &kp P                     &kp ESCAPE
+&kp BACKSPACE   &HRL LEFT_GUI A  &HRL LEFT_ALT S  &HRL LCTRL D  &HRL LEFT_SHIFT F  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &HRR LEFT_SHIFT J  &HRR RCTRL K  &HRR LEFT_ALT L  &HRR RIGHT_GUI SEMICOLON  &kp SQT
+&kp LEFT_SHIFT  &kp Z            &kp X            &kp C         &kp V              &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M              &kp COMMA     &kp DOT          &kp FSLH                  &kp LCTRL
+                                                  &kp LGUI      &mo 1              &lt 3 SPACE                                               &lt 3 ENTER  &mo 2              &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
