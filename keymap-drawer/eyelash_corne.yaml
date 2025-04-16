@@ -215,7 +215,7 @@ layers:
   - RGB BRI
   - RGB EFR
   - RGB EFF
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB HUI
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
@@ -230,7 +230,7 @@ layers:
   - '&bl BL_INC'
   - '&bl BL_CYCLE'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB HUD
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
