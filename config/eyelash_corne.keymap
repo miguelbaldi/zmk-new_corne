@@ -186,10 +186,10 @@
         layer_4 {
             display-name = "CTRL";
             bindings = <
-&bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &none                                 &mmv MOVE_UP                     &bt BT_CLR      &none  &none  &none  &none  &none
-&rgb_ug RGB_TOG  &rgb_ug RGB_SAD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &none                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bt BT_CLR_ALL  &none  &none  &none  &none  &none
-&bl BL_TOG       &bl BL_DEC       &bl BL_INC       &bl BL_CYCLE     &trans           &none   &kp C_MUTE                    &mmv MOVE_DOWN                   &none           &none  &none  &none  &none  &none
-                                                   &to 0            &trans           &trans                                                                 &kp INS         &to 3  &to 0
+&bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &none                                          &mmv MOVE_UP                     &bt BT_CLR      &none  &none  &none  &none  &none
+&rgb_ug RGB_TOG  &rgb_ug RGB_SAD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_HUI                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bt BT_CLR_ALL  &none  &none  &none  &none  &none
+&bl BL_TOG       &bl BL_DEC       &bl BL_INC       &bl BL_CYCLE     &trans           &rgb_ug RGB_HUD  &kp C_MUTE                    &mmv MOVE_DOWN                   &none           &none  &none  &none  &none  &none
+                                                   &to 0            &trans           &trans                                                                          &kp INS         &to 3  &to 0
             >;
 
             sensor-bindings = <&rgb_encoder>;
