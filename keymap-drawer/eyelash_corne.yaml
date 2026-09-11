@@ -245,3 +245,6 @@ layers:
   - INS
   - {t: Fn, h: toggle}
   - {t: QWERTY, h: toggle}
+combos:
+- p: [1, 15, 29]
+  k: '&soft_off'
