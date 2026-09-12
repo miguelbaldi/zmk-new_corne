@@ -41,7 +41,7 @@ layers:
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
-  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SLASH AND QUESTION MARK))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD INTERNATIONAL1))
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - NUMBER
