@@ -5,9 +5,10 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
 /* Locale key codes extensions: https://github.com/joelspadin/zmk-locale-generator */
-
+#ifndef KEYMAP_DRAWER
 #include "keys_pt_abnt2.h"
 #include "keys_us_international.h"
+#endif
 #include <behaviors/runtime-sensor-rotate.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/backlight.h>

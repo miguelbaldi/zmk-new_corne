@@ -116,8 +116,7 @@ parse_config:
   trans_legend:
     tap: $$mdi:transfer$$
     type: trans
-  zmk_remove_keycode_prefix:
-    - "PT_"
+  zmk_remove_keycode_prefix: ["PT_"]
   raw_binding_map:
     # Layers
     "&ltq 1 BACKSPACE":
@@ -256,10 +255,6 @@ parse_config:
       tap: $$mdi:backup-restore$$
     "&bootloader":
       tap: $$mdi:progress-download$$
-    # pt_abnt2
-    "(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD INTERNATIONAL1))":
-      tap: "/"
-      shifted: "?"
   # ZMK
   zmk_keycode_map:
     # Symbols
@@ -293,9 +288,6 @@ parse_config:
     UNDERSCORE: _
     UNDER: _
     SLASH:
-      tap: "/"
-      shifted: "?"
-    "(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD INTERNATIONAL1))":
       tap: "/"
       shifted: "?"
     FSLH:
