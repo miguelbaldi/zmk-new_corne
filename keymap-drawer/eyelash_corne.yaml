@@ -27,7 +27,7 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - '&hrr_cedilla'
+  - {t: ;, s: ':', right: ç}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
   - Z
