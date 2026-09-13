@@ -116,7 +116,8 @@ parse_config:
   trans_legend:
     tap: $$mdi:transfer$$
     type: trans
-
+  zmk_remove_keycode_prefix:
+    - "PT_"
   raw_binding_map:
     # Layers
     "&ltq 1 BACKSPACE":
