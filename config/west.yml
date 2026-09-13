@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: eyelash_corne
       url: https://github.com/miguelbaldi/zmk-new_corne
-      revision: update
+      revision: main
     - name: zmk
       remote: cormoran
       revision: v0.3-branch+dya
