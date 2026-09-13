@@ -294,6 +294,9 @@ parse_config:
     SLASH:
       tap: "/"
       shifted: "?"
+    "(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD INTERNATIONAL1))":
+      tap: "/"
+      shifted: "?"
     FSLH:
       tap: "/"
       shifted: "?"
