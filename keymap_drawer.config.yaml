@@ -291,6 +291,9 @@ parse_config:
     SLASH:
       tap: "/"
       shifted: "?"
+    PT_SLASH:
+      tap: "/"
+      shifted: "?"
     FSLH:
       tap: "/"
       shifted: "?"
